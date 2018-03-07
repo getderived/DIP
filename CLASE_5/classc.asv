@@ -1,0 +1,7 @@
+clear all, close all, clc
+a=imread('beans.JPG');
+%Ecualizar el histograma:
+b=histeq(a);
+figure(1);subplot 211;imshow(a);subplot 212;imhist(a);
+%figure(2); 
+subplot 223;imshow(b);subplot 224;imhist(b);

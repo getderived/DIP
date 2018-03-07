@@ -1,0 +1,7 @@
+clear all, close all, clc
+a=imread('carbmp.bmp'); a= rgb2gray(a);
+figure(1);imshow(a);impixelinfo;
+figure(2);imhist(a);
+b=a;
+b(b<70)=0; b(>72)=0
+figure(3);imshow(b); impixelinfo;imhist(b);

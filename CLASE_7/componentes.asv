@@ -1,0 +1,13 @@
+function [a1,a2] = componentes(a)
+      %  'lab2lch'   'lch2lab'   'upvpl2xyz'   'xyz2upvpl'
+       % 'uvl2xyz'   'xyz2uvl'   'xyl2xyz'     'xyz2xyl'
+        %'xyz2lab'   'lab2xyz'   'srgb2xyz'    'xyz2srgb'
+        %'srgb2lab'  'lab2srgb'  'srgb2cmyk'   'cmyk2srgb'
+
+
+a1=chori(a);
+a2=rgb2hsv(a);
+a2=chori(a2);
+end
+
+

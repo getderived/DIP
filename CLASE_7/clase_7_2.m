@@ -13,3 +13,14 @@ c2 = min(s,b);
 c3 = max (s, y);
 c4 = max (s, b);
 figure(4); imshow([c1,c2;c3,c4]);impixelinfo
+
+c5= c1;
+c5(c5<180)=0; c5(c5>0)=255;
+figure(5); imshow(c5);
+figure(6); imshow(a);
+
+%Para diferenciar el color
+c5= [c5, c5, c5];
+c5= reshape(c5, [fil,col,cap]);
+a(c5==0)= 0;
+figure(7);imshow(a);

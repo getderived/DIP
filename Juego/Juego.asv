@@ -25,7 +25,7 @@ while(1)
     hold on
     for i = puntaje+1:size(circulos,1)
         elm=circulos(i,:);
-        circle(elm);
+        circle(elm(1),elm(2),elm(3));
         elm(2)=elm(2)+5;
         circulos(i,:)=elm;        
     end
@@ -50,10 +50,10 @@ while(1)
         y = s(id).Centroid(2) - 5;
         p = [x, y, l, 13];
         r = rectangle('Position',p,'EdgeColor','r','LineWidth',2);
-        if atrapar(circulos(puntaje+1,:),p)==1
-            puntaje=puntaje+1;
-            xnew=ceil(640*rand());
-            circulos=[circulos;[x,0,radio,radio]];
-        end
+    end
+    if atrapar(circulos(puntaje+1,:))
+        puntaje=puntaje+1
+        xnew=ceil(640*rand());
+        circulos=[circulos;[x,0,]]
     end
 end

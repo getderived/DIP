@@ -47,9 +47,9 @@ while boolean
         %que cumplen con la mascara de reconocimiento, se encuentra vacio.
         else
             [~, id] = max([menu_o.Area]);  %Obtenemos el ID del objeto cuya área sea la mayor en el vector de objetos
-            menu_x = s(id).Centroid(1)-15;%Coordenada en X para el CUADRO que identificará al jugador
-            menu_y = s(id).Centroid(2)-15;
-            menu_c = [x, y, 30, 30];
+            menu_x = menu_o(id).Centroid(1)-15;%Coordenada en X para el CUADRO que identificará al jugador
+            menu_y = menu_o(id).Centroid(2)-15;
+            menu_c = [menu_x, menu_y, 30, 30];
             menu_curs = cicle(menu_c);
             if bboxOverlapRatio(menu_s,menu_c)>0
                 loose=0;
